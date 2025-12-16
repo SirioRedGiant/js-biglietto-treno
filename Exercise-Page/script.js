@@ -36,4 +36,22 @@ function calcolaPrezzoBiglietto() {
     prezzoTotaleBase -= scontoAnziani;
     console.log("Applicato sconto over 65 (40%)");
   }
+  // Se nessuna delle condizioni sopra è vera, non viene applicato nessuno sconto. else tascurabile?
+
+  // # Output
+
+  // Prezzo con massimo due decimali
+  const prezzoConDueDecimali = prezzoTotaleBase.toFixed(2);
+
+  // Preparazione del messaggio finale per l'utente
+  const messaggioOutput = `
+        Dettagli viaggio:
+        Km percorsi: ${chilometri}
+        Età: ${etaPasseggero} anni
+        Prezzo finale: €:${prezzoConDueDecimali}
+    `;
+
+  // Stampa il risultato nella console e lo mostra in un alert
+  console.log(messaggioOutput);
+  alert(messaggioOutput);
 }
