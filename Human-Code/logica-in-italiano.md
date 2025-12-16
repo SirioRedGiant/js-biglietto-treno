@@ -12,10 +12,15 @@
 
 # Elaborazione
 
+- Calcolo prezzo base del biglietto(senza sconti)
+` applicazione sconti `
 - Se l'età dell'utente è inferiore ai 18 anni applico uno sconto del 20%.
-- Se l'età dell'utente è superiore ai 65 anni applico uno sconto del 40 %.
-
+    * Calcolo sconto e lo sottraggo dal totale
+- Altrimenti se l'età dell'utente è superiore ai 65 anni applico uno sconto del 40 %.
+    * Calcolo sconto e lo sottraggo dal totale
+- Altrimenti non applico nessuno sconto
 # Output
 
-Restituisco prezzo finale con massimo 2 decimali
+Restituisco prezzo finale con massimo 2 decimali 
+"toFixed(2)"
 
