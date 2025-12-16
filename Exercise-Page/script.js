@@ -3,67 +3,28 @@
 */
 function calcolaPrezzoBiglietto() {
   // MOdifica della raccolta dati per verificari gli imput
-  const PrezzoPerKmBase = 0.21;
+  const prezzoPerKmBase = 0.21;
   let chilometriDaPercorrere;
   let etaPasseggero;
+  console.log(prezzoPerKmBase);
 
   // Validare gli imput dell'utente
-
- COME LO FAREI CON PYTHON
- 
-  while True:
-        try:
-            input_km = input("Inserisci il numero di chilometri da percorrere (deve essere un numero positivo): ")
-            chilometri_da_percorrere = float(input_km) 
-
-            if chilometri_da_percorrere <= 0:
-                print("Errore: Inserisci un valore numerico valido e positivo per i chilometri.")
-                continue 
-            else:
-                break 
-
-        except ValueError:
-            print("Errore: Input non valido. Assicurati di inserire solo numeri.")
-            continue
-
-
-    while True:
-        try:
-            input_eta = input("Inserisci l'età del passeggero (deve essere un numero intero positivo): ")
-            eta_passeggero = int(input_eta)
-
-            if eta_passeggero < 0 or eta_passeggero > 120:
-                print("Errore: Inserisci un'età valida tra 0 e 120 anni.")
-                continue
-            else:
-                break
-
-        except ValueError:
-            print("Errore: Input non valido. Assicurati di inserire un numero intero.")
-            continue
-*/
-  /*
-    
-  // # Raccolta dati
-
-  // Chiedo all'utente il numero di km e converto in numero
-  const chilometriDaPercorrere = parseFloat(
-    prompt("Inserisci il numero di chilometri da percorrere:")
-  );
-
-  // Chiedo all'utente l'età del passeggero e converto in numero intero
-  const etaPasseggero = parseInt(prompt("Inserisci l'età del passeggero:"));
-
-  // Costante per il prezzo base al km
-  const PrezzoPerKmBase = 0.21;
-
-  // TODO(later): Aggiungere qui la validazione degli input
-    */
+  do {
+    chilometriDaPercorrere = parseFloat(
+      prompt("Inserisci il numero di chilometri da percorrere:")
+    );
+  } while (isNaN(chilometriDaPercorrere));
+  console.log(chilometriDaPercorrere);
+  do {
+    etaPasseggero = parseFloat(prompt("Inserisci l'età del passeggero:"));
+  } while (isNaN(etaPasseggero));
+  console.log(etaPasseggero);
 
   // # Elaborazione
 
   // Calcolo il prezzo base senza sconti
-  let prezzoTotaleBase = chilometriDaPercorrere * PrezzoPerKmBase;
+  let prezzoTotaleBase = chilometriDaPercorrere * prezzoPerKmBase;
+  console.log(prezzoTotaleBase);
 
   // Applicazione degli sconti
   if (etaPasseggero < 18) {
@@ -79,7 +40,6 @@ function calcolaPrezzoBiglietto() {
     prezzoTotaleBase -= scontoAnziani;
     console.log("Applicato sconto over 65 (40%)");
   }
-  // Se nessuna delle condizioni sopra è vera, non viene applicato nessuno sconto. else tascurabile?
 
   // # Output
 
