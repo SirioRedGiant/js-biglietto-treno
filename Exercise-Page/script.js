@@ -6,8 +6,42 @@ function calcolaPrezzoBiglietto() {
   const PrezzoPerKmBase = 0.21;
   let chilometriDaPercorrere;
   let etaPasseggero;
-  
 
+  // Validare gli imput dell'utente
+
+ COME LO FAREI CON PYTHON
+ 
+  while True:
+        try:
+            input_km = input("Inserisci il numero di chilometri da percorrere (deve essere un numero positivo): ")
+            chilometri_da_percorrere = float(input_km) 
+
+            if chilometri_da_percorrere <= 0:
+                print("Errore: Inserisci un valore numerico valido e positivo per i chilometri.")
+                continue 
+            else:
+                break 
+
+        except ValueError:
+            print("Errore: Input non valido. Assicurati di inserire solo numeri.")
+            continue
+
+
+    while True:
+        try:
+            input_eta = input("Inserisci l'età del passeggero (deve essere un numero intero positivo): ")
+            eta_passeggero = int(input_eta)
+
+            if eta_passeggero < 0 or eta_passeggero > 120:
+                print("Errore: Inserisci un'età valida tra 0 e 120 anni.")
+                continue
+            else:
+                break
+
+        except ValueError:
+            print("Errore: Input non valido. Assicurati di inserire un numero intero.")
+            continue
+*/
   /*
     
   // # Raccolta dati
