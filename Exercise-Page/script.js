@@ -6,7 +6,7 @@ function calcolaPrezzoBiglietto() {
   const prezzoPerKmBase = 0.21;
   let chilometriDaPercorrere;
   let etaPasseggero;
-  console.log(prezzoPerKmBase);
+  console.log(prezzoPerKmBase + " prezzo al Km");
 
   // Validare gli imput dell'utente
   do {
@@ -14,7 +14,7 @@ function calcolaPrezzoBiglietto() {
       prompt("Inserisci il numero di chilometri da percorrere:")
     );
   } while (isNaN(chilometriDaPercorrere));
-  console.log(chilometriDaPercorrere);
+  console.log(chilometriDaPercorrere + " Km previsti");
   do {
     etaPasseggero = parseFloat(prompt("Inserisci l'età del passeggero:"));
   } while (isNaN(etaPasseggero));
@@ -24,7 +24,7 @@ function calcolaPrezzoBiglietto() {
 
   // Calcolo il prezzo base senza sconti
   let prezzoTotaleBase = chilometriDaPercorrere * prezzoPerKmBase;
-  console.log(prezzoTotaleBase);
+  console.log(prezzoTotaleBase + "prezzo pieno del biglietto");
 
   // Applicazione degli sconti
   if (etaPasseggero < 18) {
@@ -51,7 +51,7 @@ function calcolaPrezzoBiglietto() {
         Dettagli viaggio:
         Km percorsi: ${chilometriDaPercorrere}
         Età: ${etaPasseggero} anni
-        Prezzo finale: €:${prezzoConDueDecimali}
+        Prezzo finale: €: ${prezzoConDueDecimali}
     `;
 
   // Stampa il risultato nella console e lo mostra in un alert
