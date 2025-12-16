@@ -2,6 +2,14 @@
     FUNZIONE CALCOLO COSTO BIGLIETTO
 */
 function calcolaPrezzoBiglietto() {
+  // MOdifica della raccolta dati per verificari gli imput
+  const PrezzoPerKmBase = 0.21;
+  let chilometriDaPercorrere;
+  let etaPasseggero;
+  
+
+  /*
+    
   // # Raccolta dati
 
   // Chiedo all'utente il numero di km e converto in numero
@@ -16,6 +24,7 @@ function calcolaPrezzoBiglietto() {
   const PrezzoPerKmBase = 0.21;
 
   // TODO(later): Aggiungere qui la validazione degli input
+    */
 
   // # Elaborazione
 
@@ -46,7 +55,7 @@ function calcolaPrezzoBiglietto() {
   // Preparazione del messaggio finale per l'utente
   const messaggioOutput = `
         Dettagli viaggio:
-        Km percorsi: ${chilometri}
+        Km percorsi: ${chilometriDaPercorrere}
         Età: ${etaPasseggero} anni
         Prezzo finale: €:${prezzoConDueDecimali}
     `;
@@ -55,3 +64,4 @@ function calcolaPrezzoBiglietto() {
   console.log(messaggioOutput);
   alert(messaggioOutput);
 }
+calcolaPrezzoBiglietto();
