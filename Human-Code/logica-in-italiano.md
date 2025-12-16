@@ -21,6 +21,5 @@
 - Altrimenti non applico nessuno sconto
 # Output
 
-Restituisco prezzo finale con massimo 2 decimali 
-"toFixed(2)"
+Restituisco prezzo finale con massimo 2 decimali "toFixed(2)"
 

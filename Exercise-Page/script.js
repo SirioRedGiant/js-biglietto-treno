@@ -24,7 +24,7 @@ function calcolaPrezzoBiglietto() {
 
   // Calcolo il prezzo base senza sconti
   let prezzoTotaleBase = chilometriDaPercorrere * prezzoPerKmBase;
-  console.log(prezzoTotaleBase + "prezzo pieno del biglietto");
+  console.log(prezzoTotaleBase + " prezzo pieno del biglietto");
 
   // Applicazione degli sconti
   if (etaPasseggero < 18) {
